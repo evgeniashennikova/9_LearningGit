@@ -20,4 +20,18 @@ public class InstanceTest {
         String actualResult = $("#cwos").getText();
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    void secondTest() {
+
+        String quest = "2-6";
+        String expectedResult = "0";
+
+        open("https://www.google.ru/");
+        $("[name='q']").setValue(quest);
+        $("[name='btnK']").click();
+        String actualResult = $("#cwos").getText();
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
 }
