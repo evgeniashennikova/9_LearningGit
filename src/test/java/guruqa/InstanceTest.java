@@ -25,7 +25,7 @@ public class InstanceTest {
     void secondTest() {
 
         String quest = "2-6";
-        String expectedResult = "0";
+        String expectedResult = "-4";
 
         open("https://www.google.ru/");
         $("[name='q']").setValue(quest);
