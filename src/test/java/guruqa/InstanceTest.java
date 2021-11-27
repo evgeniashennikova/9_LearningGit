@@ -20,4 +20,31 @@ public class InstanceTest {
         String actualResult = $("#cwos").getText();
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    void secondTest() {
+
+        String quest = "2-6";
+        String expectedResult = "-4";
+
+        open("https://www.google.ru/");
+        $("[name='q']").setValue(quest);
+        $("[name='btnK']").click();
+        String actualResult = $("#cwos").getText();
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void thirdTest() {
+
+        String quest = "2/0";
+        String expectedResult = "undefined";
+
+        open("https://www.google.ru/");
+        $("[name='q']").setValue(quest);
+        $("[name='btnK']").click();
+        String actualResult = $(".dDoNo").getText();
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
 }
